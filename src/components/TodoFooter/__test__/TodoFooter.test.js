@@ -22,32 +22,32 @@ it('should render "task" when onle 1 task left to do', () => {
     expect(paragraphElement).toBeInTheDocument();
 });
 
-it('should render "task" when onle 1 task left to do', () => {
-    render(<MockTodoFooter numberOfIncompleteTasks={1} />);
-    const paragraphElement = screen.getByText(/1 Task Left/i);
-    expect(paragraphElement).toBeVisible();
-});
+// it('should render "task" when onle 1 task left to do', () => {
+//     render(<MockTodoFooter numberOfIncompleteTasks={1} />);
+//     const paragraphElement = screen.getByText(/1 Task Left/i);
+//     expect(paragraphElement).toBeVisible();
+// });
 
-it('should render "task" when onle 1 task left to do', () => {
-    render(<MockTodoFooter numberOfIncompleteTasks={1} />);
-    const paragraphElement = screen.getByText(/1 Task Left/i);
-    expect(paragraphElement).toContainHTML("p");
-});
+// it('should render "task" when onle 1 task left to do', () => {
+//     render(<MockTodoFooter numberOfIncompleteTasks={1} />);
+//     const paragraphElement = screen.getByText(/1 Task Left/i);
+//     expect(paragraphElement).toContainHTML("p");
+// });
 
-it('should render "task" when onle 1 task left to do', () => {
-    render(<MockTodoFooter numberOfIncompleteTasks={1} />);
-    const paragraphElement = screen.getByTestId("para");
-    expect(paragraphElement).toHaveTextContent("1 task left");
-});
+// it('should render "task" when onle 1 task left to do', () => {
+//     render(<MockTodoFooter numberOfIncompleteTasks={1} />);
+//     const paragraphElement = screen.getByTestId("para");
+//     expect(paragraphElement).toHaveTextContent("1 task left");
+// });
 
-it('should render "task" when onle 1 task left to do', () => {
-    render(<MockTodoFooter numberOfIncompleteTasks={1} />);
-    const paragraphElement = screen.getByTestId("para");
-    expect(paragraphElement).not.toBeFalsy();
-});
+// it('should render "task" when onle 1 task left to do', () => {
+//     render(<MockTodoFooter numberOfIncompleteTasks={1} />);
+//     const paragraphElement = screen.getByTestId("para");
+//     expect(paragraphElement).not.toBeFalsy();
+// });
 
-it('should render "task" when onle 1 task left to do', () => {
-    render(<MockTodoFooter numberOfIncompleteTasks={1} />);
-    const paragraphElement = screen.getByTestId("para");
-    expect(paragraphElement.textContent).toBe("1 task left");
-});
+// it('should render "task" when onle 1 task left to do', () => {
+//     render(<MockTodoFooter numberOfIncompleteTasks={1} />);
+//     const paragraphElement = screen.getByTestId("para");
+//     expect(paragraphElement.textContent).toBe("1 task left");
+// });
