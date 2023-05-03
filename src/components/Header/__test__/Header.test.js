@@ -1,10 +1,12 @@
 import { render, screen } from "@testing-library/react";
 import Header from "../Header";
 
-it("should render header with passed props", () => {
-    render(<Header title="My Header" />);
-    const headerElement = screen.getByText(/My Header/i);
-    expect(headerElement).toBeInTheDocument();
+describe("Header", () => {
+    it("should render header with passed props", () => {
+        render(<Header title="My Header" />);
+        const headerElement = screen.getByText(/My Header/i);
+        expect(headerElement).toBeInTheDocument();
+    });
 });
 
 // it("should render header with passed props", () => {
