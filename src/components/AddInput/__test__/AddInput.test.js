@@ -1,0 +1,45 @@
+import { render, screen, fireEvent } from "@testing-library/react";
+import AddInput from "../AddInput";
+
+const mockSetTodos = jest.fn();
+
+describe("AddInput", () => {
+    it("Should render the input element", () => {
+        render(<AddInput setTodos={mockSetTodos} todos={[]} />);
+        const inputElement = screen.getByPlaceholderText(
+            /Add a new task here.../i,
+        );
+        expect(inputElement).toBeInTheDocument();
+    });
+
+    it("Should allo typing into the input element", () => {
+        render(<AddInput setTodos={mockSetTodos} todos={[]} />);
+
+        const inputElement = screen.getByPlaceholderText(
+            /Add a new task here.../i,
+        );
+
+        fireEvent.change(inputElement, {
+            target: { value: "Go Grocery Shopping" },
+        });
+
+        expect(inputElement.value).toBe("Go Grocery Shopping");
+    });
+
+    it("Should clear input field when button is clicked", () => {
+        render(<AddInput setTodos={mockSetTodos} todos={[]} />);
+
+        const inputElement = screen.getByPlaceholderText(
+            /Add a new task here.../i,
+        );
+        const buttonElement = screen.getByRole("button", { name: /add/i });
+
+        fireEvent.change(inputElement, {
+            target: { value: "Go Grocery Shopping" },
+        });
+
+        fireEvent.click(buttonElement);
+
+        expect(inputElement.value).toBe("");
+    });
+});
