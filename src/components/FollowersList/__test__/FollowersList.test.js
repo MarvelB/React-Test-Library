@@ -309,6 +309,22 @@ jest.mock("axios", () => ({
 }));
 
 describe("FollowersList", () => {
+    beforeEach(() => {
+        console.log("RUNING BEFORE EACH TEST");
+    });
+
+    beforeAll(() => {
+        console.log("RUNING BEFORE ALL TESTS");
+    });
+
+    afterEach(() => {
+        console.log("RUNING AFTER EACH TEST");
+    });
+
+    afterAll(() => {
+        console.log("RUNING AFTER ALL TESTS");
+    });
+
     it("Should be able to find first follower in the list", async () => {
         render(<MockFollowersList />);
 
